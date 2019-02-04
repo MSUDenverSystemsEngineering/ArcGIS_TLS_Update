@@ -142,7 +142,7 @@ Try {
 
 		## <Perform Installation tasks here>
 
-        $exitCode = Execute-MSI -Action "Patch" -Path "$dirFiles\ArcGIS-1051-DT-TLS-Patch.msp" -WindowStyle "Hidden" -PassThru
+        $exitCode = Execute-MSI -Action "Patch" -Path "$dirFiles\ArcGIS-1051-DT-TLS-Patch.msp" -PassThru
         If (($exitCode.ExitCode -ne "0") -and ($mainExitCode -ne "3010")) { $mainExitCode = $exitCode.ExitCode }
 
 
